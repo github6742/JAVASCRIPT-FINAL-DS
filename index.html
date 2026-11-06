@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Online - Simulador de Compras</title>
+
+  <!-- Librerías externas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- defer obligatorio según la consigna -->
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script defer src="./js/main.js"></script>
+  <script defer src="./js/tienda.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Tienda Online</h1>
+    <nav>
+      <a href="./pages/admin.html" class="linkAdmin">Panel de Administración</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección de carga (feedback visual mientras resuelve el fetch) -->
+    <section id="seccionCarga" class="seccionCarga">
+      <p>Cargando productos…</p>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="seccionCatalogo" class="seccionCatalogo oculto">
+      <div class="filtros">
+        <label for="selectCategoria">Filtrar por categoría:</label>
+        <select id="selectCategoria">
+          <option value="">Todas las categorías</option>
+        </select>
+      </div>
+      <div id="contenedorProductos" class="contenedorProductos"></div>
+    </section>
+
+    <!-- Carrito -->
+    <section id="seccionCarrito" class="seccionCarrito">
+      <h2>Carrito de Compras</h2>
+      <div id="contenedorCarrito" class="contenedorCarrito"></div>
+      <p id="totalCarrito" class="totalCarrito">Total: $0</p>
+      <div class="accionesCarrito">
+        <button id="botonVaciarCarrito" class="botonSecundario">Vaciar Carrito</button>
+        <button id="botonFinalizarCompra" class="botonPrimario">Finalizar Compra</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Simulador de compras — Proyecto Final</p>
+  </footer>
+</body>
+</html>

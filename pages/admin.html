@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Carga de Productos</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/admin.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Panel de Administración</h1>
+    <nav>
+      <a href="../index.html" class="linkAdmin">Volver a la Tienda</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccionFormulario">
+      <h2>Agregar Producto</h2>
+      <form id="formularioProducto" class="formulario">
+        <div class="campo">
+          <label for="inputCodigo">Código:</label>
+          <input type="text" id="inputCodigo" required />
+        </div>
+        <div class="campo">
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" id="inputNombre" required />
+        </div>
+        <div class="campo">
+          <label for="inputMarca">Marca:</label>
+          <input type="text" id="inputMarca" required />
+        </div>
+        <div class="campo">
+          <label for="inputCategoria">Categoría:</label>
+          <select id="inputCategoria" required>
+            <option value="">Seleccione…</option>
+            <option value="TELEVISOR">TELEVISOR</option>
+            <option value="COCINA">COCINA</option>
+            <option value="HELADERA">HELADERA</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="inputPrecio">Precio:</label>
+          <input type="number" id="inputPrecio" min="1" required />
+        </div>
+        <button type="submit" class="botonPrimario">Guardar Producto</button>
+      </form>
+    </section>
+
+    <section class="seccionListado">
+      <h2>Productos Cargados</h2>
+      <div id="contenedorAdminProductos" class="contenedorProductos"></div>
+    </section>
+  </main>
+</body>
+</html>
